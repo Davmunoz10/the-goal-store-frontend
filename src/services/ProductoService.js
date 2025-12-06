@@ -23,6 +23,5 @@ class ProductoService {
     }
 }
 
-// 👇 Solución del warning
 const productoService = new ProductoService();
 export default productoService;

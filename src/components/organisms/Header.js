@@ -19,12 +19,10 @@ export default function Header() {
     <header className="header">
       <div className="header-content">
 
-        {/* LOGO */}
         <div className="header-logo">
           <Logo />
         </div>
 
-        {/* MENÚ PRINCIPAL */}
         <nav className="header-menu">
           <ul>
             <MenuNavegacion destino="/" texto="Inicio" />
@@ -39,16 +37,13 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* SECCIÓN DERECHA */}
         <div className="header-right">
 
-          {/* CARRITO */}
           <a href="/carrito" className="carrito-icon">
             🛒
             <span className="carrito-contador">{cantidadTotal}</span>
           </a>
 
-          {/* USUARIO LOGUEADO */}
           {usuario && (
             <div className="header-usuario">
               <span className="icono-usuario">👤</span>
@@ -56,7 +51,6 @@ export default function Header() {
             </div>
           )}
 
-          {/* BOTÓN CERRAR SESIÓN */}
           {usuario && (
             <button className="btn-logout" onClick={handleLogout}>
               Cerrar Sesión

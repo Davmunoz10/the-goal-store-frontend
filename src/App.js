@@ -25,9 +25,6 @@ import PagoErrorPage from "./components/pages/PagoErrorPage";
 import UsuariosPage from "./components/pages/UsuariosPage";
 import NuevoPedidoPage from "./components/pages/NuevoPedidoPage";
 
-// -------------------
-// RUTA ADMIN PROTEGIDA
-// -------------------
 function RutaAdmin({ children }) {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
 
@@ -61,7 +58,6 @@ export default function App() {
 
           <Route path="/usuarios" element={<UsuariosPage />} />
 
-          {/* ADMIN PROTEGIDO */}
           <Route
             path="/admin"
             element={

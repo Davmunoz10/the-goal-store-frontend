@@ -13,12 +13,10 @@ export default function RegisterContent() {
       correo: e.target.correo.value,
     };
 
-    // Guardar usuario registrado
     localStorage.setItem("usuarioRegistrado", JSON.stringify(usuarioNuevo));
 
     alert(`✔ Usuario registrado correctamente: ${nombre}`);
 
-    // Ir al HOME después del registro
     navigate("/");
   };
 

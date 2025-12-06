@@ -1,4 +1,3 @@
-// src/components/organisms/ComprarContent.js
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useCarrito } from "../../context/CarritoContext";
@@ -21,9 +20,6 @@ export default function ComprarContent() {
   const onChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  // ==========================
-  // onSubmit CONECTADO A AWS
-  // ==========================
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -56,7 +52,6 @@ export default function ComprarContent() {
       const resp = await BoletaService.crearBoleta(usuario.id, items);
       const { boleta_id } = resp.data;
 
-      // 🔥 AQUÍ GUARDAMOS EL TOTAL REAL DEL CARRITO
       const totalReal = carrito.reduce(
         (acc, item) => acc + item.precio * item.cantidad,
         0

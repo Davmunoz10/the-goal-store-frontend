@@ -1,4 +1,3 @@
-// src/services/BoletaService.js
 import api from "./AxiosConfig";
 
 const BoletaService = {

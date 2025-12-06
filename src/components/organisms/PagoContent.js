@@ -38,9 +38,6 @@ export default function PagoContent({ exito }) {
     navigate("/productos");
   };
 
-  // ======================================
-  // 🔥 FUNCIÓN QUE GENERA Y DESCARGA LA BOLETA
-  // ======================================
   const descargarBoleta = () => {
     if (!pedido) return;
 
@@ -92,7 +89,6 @@ export default function PagoContent({ exito }) {
               Código de orden: ORDER{numeroOrden}
             </p>
 
-            {/* DATOS DEL CLIENTE */}
             <h3 className="pago-subtitulo">Datos del comprador</h3>
             <div className="pago-info-cliente">
               <p>
@@ -109,7 +105,6 @@ export default function PagoContent({ exito }) {
               </p>
             </div>
 
-            {/* TABLA DE PRODUCTOS */}
             <h3 className="pago-subtitulo">Resumen de productos</h3>
 
             <table className="pago-tabla">
@@ -140,7 +135,6 @@ export default function PagoContent({ exito }) {
 
             <h3 className="pago-total">Total pagado: {formatPrice(total)}</h3>
 
-            {/* BOTONES */}
             <div className="pago-botones">
               <button className="pago-btn-volver" onClick={descargarBoleta}>
                 Descargar boleta
